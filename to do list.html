@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="tailwindcss.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Itim&display=swap" rel="stylesheet">
+    <title>todo list</title>
+    <style>
+        .h1 {
+            font-family: 'Gabriela', serif;
+        }
+        
+        li {
+            font-family: 'Itim', cursive;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-500">
+    <div id="list">
+        <div class="">
+            <h1 class="flex justify-center mb-2 text-3xl" style="font-family: 'Gebriela',serif; ">To Do list</h1>
+            <div class="flex justify-center ">
+                <input type=" text " v-model="todo " class="border-2 rounded ">
+
+                <button @click="stodo " class="mr-2 bg-red-400 text-white w-8 rounded "> add</button>
+            </div>
+            <div class="flex justify-center ">
+                <ol class=" mt-2 ">
+                    <li v-for=" todo in todos " class="bg-gray-200 w-full pr-2 pl-2 mt-1 text-center rounded ">
+                        {{todo}}
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2 "></script>
+    <script defer src="to do list js.js "></script>
+</body>
+
+</html>
